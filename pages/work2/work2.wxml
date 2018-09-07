@@ -1,0 +1,188 @@
+<view class='wrap'>
+  <view class='timer'>
+    <view class='address'>
+      <text>{{cname}}</text>
+      <navigator class='help' url="../help/help">帮助<image src="/image/icon/5.png"  mode="aspectFit"></image></navigator>
+    </view>
+    <view class="remaining">
+      <text>剩余时间</text>
+      <view></view>
+    </view>
+    <view class="countdown">
+      <text>{{time}}</text>
+      <block wx:if="{{!startChair.qu}}">
+          <text>总时长{{startChair.usetime}}分钟</text>
+      </block>
+      <block wx:if="{{startChair.pici==2}}">
+         <block wx:if="{{startChair.qu==1}}">
+             <text>总时长{{startChair.sdtctime}}小时</text>
+         </block>
+         <block wx:if="{{startChair.qu==2}}">
+             <text>总时长{{startChair.sdtctime}}天</text>
+      </block>
+     
+      </block>
+    
+    </view>
+  </view>
+
+
+</view>
+
+
+<block wx:if="{{product==1}}">
+    <view class='content'>
+      <!-- <view >发送的数据：{{shuidianhex}}</view>   -->
+    <view class='row biankuang' style=' margin-top:40rpx;'>
+        <view class='item {{sdzzcolor}} yinying'  id='zz' bindtap='shuidian'>正转</view>
+        <view class='item {{sdfzcolor}} yinying'  id='fz' bindtap='shuidian'>反转</view>
+        <view class='item {{sdzdcolor}} yinying'  id='zd' bindtap='shuidian'>自动</view>
+        <view class='item {{sdddcolor}} yinying'  id='dd' bindtap='shuidian'>抖动</view>
+    </view>
+    <view class='row' style=' height:80rpx;'>
+        <view class='{{sddcolor}}' style='margin:40rpx;font-size: 40rpx;'>缓慢</view>
+        <!-- <view class='{{sdzcolor}}' style='margin:40rpx;font-size: 40rpx;'>中</view> -->
+        <view class='{{sdgcolor}}' style='margin:40rpx;font-size: 40rpx;'>舒快</view>
+    </view>
+    <view class='row'>
+        <view class='item {{sdsdcolor}} yinying'  id='sd' style='margin-top: 50rpx;' bindtap='shuidian'>速度</view>
+    </view>
+    <view class='row' >
+      <view class='item {{sdrlcolor}} yinying' id='hot' bindtap='shuidian'>热疗</view>
+      <view class='item' style='width:80rpx;'></view>
+      <view class='item {{sdztcolor}} yinying' id='stop' bindtap='shuidian'>暂停</view>
+    </view>
+     <view class='item blue yinying' style='width:200rpx; margin-top: 60rpx;' bindtap='endsend'>结束使用</view> 
+    </view>
+</block>
+
+<block wx:if="{{product==2}}">
+</block>
+
+<block wx:if="{{product==3}}">
+    <view class='content'>
+          <view class='title'>遥控器</view>
+          <view class='row'>
+            <view class='item {{moshi1}}' style='width:180rpx;'>活力养生</view>
+            <view class='item {{moshi2}}' style='width:180rpx;'>气压舒缓</view>
+            <view class='item {{moshi3}}' style='width:180rpx;'>经络保健</view>
+          </view>
+          <view class='row'>
+       <view class='item {{wenrecolor}}  yinying'id='wenre' bindtap='jiaoji' >
+       <text style='padding-left:-10rpx;'>热疗</text>
+                
+            </view>
+
+            <view class='item {{moshicolor}} yinying' id='moshi' bindtap='jiaoji' >
+               <text style='padding-left:-10rpx;'> 模式</text>
+            </view>
+ <view class='item {{zhendongcolor}}  yinying' id='zhendong' bindtap='jiaoji' >
+               <text style='padding-left:-10rpx;'> 振动</text>
+            </view>
+
+          </view>
+          <view class='row' style=' height:80rpx;'>
+                <view class='{{qddcolor}}' style='  margin:40rpx;'>低</view>
+                <view class='{{qdzcolor}}' style='  margin:40rpx;'>中</view>
+                <view class='{{qdgcolor}}' style='  margin:40rpx;'>高</view>
+          </view>
+          <view class='row'>
+            <view class='item {{qiangducolor}}  yinying' id="qiangdu" bindtap='jiaoji' style=' margin-top: 30rpx;'>
+                           <text style='padding-left:-10rpx;'> 强度</text>
+                        </view>
+          </view>
+          <view class='row'>
+           <view class='item {{kaiguancolor}}  yinying' id='kaiguan' bindtap='jiaoji' style=' margin-top: 40rpx;'>
+               <text style='padding-left:-10rpx;'> 暂停</text>
+            </view>
+          </view>
+         
+        <view class='item blue yinying' style='width:200rpx; margin-top: 60rpx;' bindtap='endsend'>结束使用</view>
+    </view>
+</block>
+
+<block wx:if="{{product==4}}">
+    <view class='content'>
+       <!-- <view >发送的数据：{{c12hex}}</view>   -->
+     <view class='title'>颈   部</view>
+    <view class='row biankuang' >
+         <view class='item {{c12jbmscolor}} yinying'  id='jbms' bindtap='c12control'>慢速</view> 
+        <view class='item {{c12jbsdcolor}} yinying'  id='jbsd' bindtap='c12control'>手动</view>
+        <view class='item {{c12jbzdcolor}} yinying'  id='jbzd' bindtap='c12control'>自动</view>
+    </view>
+    <view class='title '>背   部</view>   
+        <view class='row biankuang' >
+        <view class='item {{c12mscolor}} yinying'  id='bbms' bindtap='c12control'>慢速</view>
+        <view class='item {{c12ybcolor}} yinying'  id='bbyb' bindtap='c12control'>摇摆</view>
+        <view class='item {{c12rncolor}} yinying'  id='bbrn' bindtap='c12control'>揉捏</view>
+    </view>
+    <view class='row' style=' height:80rpx;'>
+        <view class='{{c12dcolor}}' style='margin:40rpx;font-size: 40rpx;'>低</view>
+        <view class='{{c12zcolor}}' style='margin:40rpx;font-size: 40rpx;'>中</view>
+        <view class='{{c12gcolor}}' style='margin:40rpx;font-size: 40rpx;'>高</view>
+    </view>
+    <view class='row'>
+        <view class='item {{c12zdcolor}} yinying'  id='c12zd' style='margin-top: 50rpx;' bindtap='c12control'>振动</view>
+    </view>
+    <view class='row' >
+      <view class='item {{c12rlcolor}} yinying' id='c12rl' bindtap='c12control'>热疗</view>
+      <view class='item' style='width:80rpx;'></view>
+      <view class='item {{c12ztcolor}} yinying' id='c12zt' bindtap='c12control'>暂停</view>
+    </view>
+     <view class='item blue yinying' style='width:200rpx; margin-top: 60rpx;' bindtap='endsend'>结束使用</view> 
+    </view>
+</block>
+
+<block wx:if="{{product==5}}">
+<view class='content'>
+  <view class='title'>颈   部</view>
+  <view class='row biankuang'>
+    <view class='item orangeup yinying'  id='ju' bindtouchstart='jbup' bindtouchend='jbdown'>向上</view>
+    <view class='item orangeup yinying'  id='jd' bindtouchstart='jbup' bindtouchend='jbdown'>向下</view>
+    <view class='item {{jscolor}} yinying'  id='js' bindtap='jbauto'>手动</view>
+    <view class='item {{jzcolor}} yinying'  id='jz' bindtap='jbauto'>自动</view>
+  </view>
+     <view class='title '>背   部</view>   
+  <view class='row'>
+    <view class='item {{qbcolor}} yinying'id='bq' bindtap='changequyu'>全背</view>
+    <view class='item {{sbcolor}} yinying' id='bs' bindtap='changequyu'>上背</view>
+    <view class='item {{xbcolor}} yinying' id='bx' bindtap='changequyu'>下背</view>
+  </view>
+  <view class='row biankuang'>
+    <view class='item {{ddcolor}} yinying' id='dd' bindtap='checkisdd'>定点</view>
+    <view class='item {{aucolor}} yinying' id='au' bindtap='checkisdd'>向上</view>
+    <view class='item {{adcolor}} yinying' id='ad' bindtap='checkisdd'>向下</view>
+  </view>
+  <view class='row'>
+    <view class='wight' >低</view>
+    <view class='wight' >中</view>
+    <view class='wight' >高</view>
+  </view>
+  <view class='row'>
+    <view class='screem {{dicolor}}' id='week'></view>
+    <view class='screem {{zcolor}}' id='common'></view>
+    <view class='screem {{hcolor}}' id='hight'></view>
+  </view>
+  <view class='row'>
+   <view class='item orange yinying' id='move' bindtap='changezd' style='width:200rpx;'>坐垫振动</view>
+  </view>
+    <view class='row' >
+      <view class='item {{hotcolor}} yinying' id='hot' bindtap='changehot'>热疗</view>
+      <view class='item '></view>
+      <view class='item {{stopcolor}} yinying' id='stop' bindtap='tipsend'>暂停</view>
+     
+  </view>
+    <view class='row'>
+        <view class='item blue yinying' style='width:200rpx;' bindtap='endsend'>结束使用</view>
+      </view> 
+</view>
+
+</block>
+<!-- <block wx:if="{{product==0}}">
+     <view class='item blue yinying' style='width:200rpx; margin-top: 60rpx;' bindtap='endsend'>结束使用</view> 
+
+</block> -->
+ <!-- <view class='box'>
+{{guanggao}}
+ </view>  -->
+

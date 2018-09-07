@@ -1,0 +1,12 @@
+<template name="footer">
+<view class="footer">
+  <navigator class="home {{active=='index'?'active':''}}" url="/pages/index/index" open-type="navigate">
+    <view class="icon"></view>
+    <text>首 页</text>
+  </navigator>
+  <navigator class="usercenter {{active=='usercenter'?'active':''}}"  url="/pages/user/user" open-type="navigate">
+    <view class="icon"></view>
+    <text>个人中心</text>
+  </navigator>
+</view>
+</template>

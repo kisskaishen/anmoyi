@@ -1,0 +1,29 @@
+<view>
+  <view class="title">用户登陆</view>
+
+  <view wx:if="{{mobile.length!=11}}" class="mobile">
+    <icon class="icon"></icon>
+    <input class="mobile" type="number" placeholder="请输入手机号码" placeholder-class="telplaceholder" maxlength="11" focus="true" cursor="4" bindinput="inputmobile" value="{{inputdata}}"></input>
+    <icon class="mobilecancel" type='cancel' color="rgb(112,112,112)" style="{{!oninput?'display:none;':''}}" catch:tap="clearinput"></icon>
+  </view>
+
+  <view wx:if="{{mobile.length==11}}" class="vcode">
+      <view class="inpmobile"><icon class="icon"></icon>13302481400</view>
+      <view class="inputvcodes">
+        <input maxlength="1" focus="{{codefocus==0?true:''}}" bindinput="inputcode" data-idx="1"></input>
+        <input maxlength="1" focus="{{codefocus==1?true:''}}" bindinput="inputcode" data-idx="2"></input>
+        <input maxlength="1" focus="{{codefocus==2?true:''}}" bindinput="inputcode" data-idx="3"></input>
+        <input maxlength="1" focus="{{codefocus==3?true:''}}" bindinput="inputcode" data-idx="4"></input>
+      </view>
+      <view>
+        <view class='vcodeerror'><icon type="warn" size="20" color="red"/>
+          <text>asdfasdfsadf</text>
+        </view>
+        <button bindtap='doreturn'>返回</button>
+      </view>
+  </view>
+</view>
+
+<import src="/public/template/footer" />
+<template is="footer" data="{{...footer}}"/>
+

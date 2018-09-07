@@ -1,0 +1,64 @@
+.wrap {
+   background: #f5f6fa;
+}
+.title {
+  padding:20rpx;
+  font-size: 16pt;
+  font-weight: bold;
+}
+.helplist {
+  display: flex;
+  flex-flow:column; 
+  align-items:center;
+}
+.helplist .item {
+  width: 96%;
+  border:1px solid #eee;
+  box-shadow:#eee 0 4rpx 10rpx 4rpx;
+  background: #fff;
+  padding: 0 40rpx 40rpx 40rpx;
+  box-sizing: border-box;
+  margin:10rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+.helplist .item view:first-child {
+  font-size: 16pt;
+  margin:20rpx 0;
+}
+.helplist .item .content {
+  font-size: 10pt;
+  color:#aaa;
+  height: 46rpx; 
+  padding-bottom: 20rpx;
+  padding-right:20rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.arrow {
+  border-right:2px solid #000;
+  border-top:2px solid #000;
+  height:8px;
+  width:8px;
+  margin:50px auto 0;
+  transform:rotate(deg);
+  -webkit-transform:rotate(135deg);
+  border-left:1px solid transparent;
+  border-bottom:1px solid transparent;
+  position:absolute;
+  top:16rpx;
+  right:60rpx;
+}
+.helplist .item.active .content{
+  height:auto;
+  overflow:visible;
+  display:block;
+  padding-bottom: 0;
+}
+.helplist .item.active .arrow {
+  -webkit-transform:rotate(315deg);
+  top:26rpx;
+}

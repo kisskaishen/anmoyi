@@ -1,0 +1,21 @@
+<view class='wrap'>
+
+<view class='title'>使用帮助</view>
+
+<view class='helplist'>
+
+  <block wx:for="{{helplist}}" >
+  <view class='item {{item.active? "active":""}}' data-index="{{index}}" bindtap='itemclick'>
+    <view>{{item.title}}<view class='arrow'></view></view>
+    <view class='content'>
+      {{item.body}}
+    </view>
+  </view>
+  </block>
+
+</view>
+
+
+<!-- 
+<button class='openbule'  hover-stop-propagation="true" catch:tap="openscancode">扫描二维码</button> -->
+</view>

@@ -1,0 +1,75 @@
+/* pay */
+.payline { 
+  width:96%;
+  border-bottom:1px solid #eee;
+  margin:30rpx auto;
+  }
+.title {
+  display: block;
+  text-align: center;
+  color:#999;
+  font-size:12pt;
+  margin-bottom: -10px;
+}
+
+.payitem {
+  width:88%;
+  line-height:100rpx;
+  border:2px solid #ececec;
+  border-radius:50rpx;
+  margin:26rpx auto;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.payitem .radiomodel {
+  width:46rpx;
+  height:46rpx;
+  border:2px solid #ececec;
+  border-radius: 50%;
+  margin:0 30rpx;
+}
+.payitem .itemname {
+  font-size:16pt;
+  font-weight:bold;
+  margin-left:-80rpx;
+}
+.payitem .payspecific {
+  align-self:flex-end;
+  margin-right: 40rpx;
+  padding-top:1rpx;
+}
+.payitem .payspecific text:first-child {
+  font-size:16pt;
+}
+.payitem .payspecific text:last-child {
+  font-size:11pt;
+}
+.payitem.active {
+  border:2px solid #000;
+}
+.payitem.active .radiomodel {
+  background: #fb7828;
+}
+
+button {
+  width:88%;
+  line-height: 90rpx;
+  border-radius: 50rpx;
+  box-shadow: 8rpx 8rpx 8rpx #ccc;
+  color:#fff;
+  background: linear-gradient(#fa7828, #fb3c3a);
+  margin-top: 20rpx;
+}
+.terms {
+  display:flex;
+  justify-content:center;
+  margin-top:40rpx;
+  align-items:center;
+}
+.terms text {
+  font-size: 10pt;
+  margin-left: 20rpx;
+}
+
+

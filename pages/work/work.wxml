@@ -1,0 +1,23 @@
+<view class='wrap'>
+  <view class='timer'>
+    <view class='address'>
+      <text>按摩椅编号: {{cnumber}}</text>
+      <navigator class='help' url="../help/help">帮助<image src="/image/icon/5.png"  mode="aspectFit"></image></navigator>
+    </view>
+    <view class="remaining">
+      <text>{{iscountdown?'剩余时间':''}}</text>
+      <view></view>
+    </view>
+    <view class="countdown">
+      <text class="{{iscountdown?'iscountdown':''}}">{{time}}</text>
+      <text>使用时长{{startinfo.usetime>0?startinfo.usetime:'0'}}分钟</text>
+    </view>
+  </view>
+
+  <view class="adlist">
+      
+  </view>
+
+</view>
+<import src="/public/template/footer" />
+<template is="footer" data="{{...footer}}"/>

@@ -1,0 +1,35 @@
+
+.warp {
+  background: #eee;
+  height: 400rpx;
+  padding-top: 40rpx;
+}
+.usrinfo {
+  border-bottom:2px solid #eee;
+  height: 160rpx;
+  width:100%;
+  background: #fff;
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+}
+
+.usrinfo image {
+  width:120rpx;
+  height:120rpx;
+  background: red;
+  border-radius: 50%;
+}
+.usrinfo .mobile { margin-left:-50rpx; }
+.usrinfo .mobile view {
+  font-size: 18pt;
+  color:rgb(92, 92, 92);
+}
+.usrinfo .mobile text {
+  color:#888;
+  font-size: 11pt;
+}
+.usrinfo .loginbutton button {
+  width: 200rpx;
+  border: 1px solid #ccc;
+}

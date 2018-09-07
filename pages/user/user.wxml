@@ -1,0 +1,23 @@
+<view class="warp">
+
+  <view class="usrinfo">
+      <image></image>
+      <view class="mobile">
+        <view>ccc</view>
+        <text>13302481400</text>
+      </view>
+      <view class="loginbutton">
+          
+        <block wx:if="{{isLogin}}">
+            <button plain="false" type="primary" bindtap="dologinout">退出</button>
+        </block>
+        <block wx:else>
+            <button type="primary" bindtap="dologin">登陆</button>
+        </block>
+      </view>
+  </view>
+
+</view>
+
+<import src="/public/template/footer" />
+<template is="footer" data="{{...footer}}"/>
