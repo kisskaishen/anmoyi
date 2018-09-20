@@ -1,11 +1,19 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/pay/pay",
-    "pages/work2/work2",
+    
     "pages/work/work",
+    
     "pages/user/user",
+    
+    "pages/index/index",
+    
+    
+    
+    
+    "pages/work2/work2",
     "pages/help/help",
+    
     "pages/login/login"
     
   ],
@@ -14,5 +22,5 @@
     "navigationBarTextStyle":"light"
   },
 
-  "debug": false
+  "debug": true
 }

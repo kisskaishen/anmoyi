@@ -9,7 +9,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
-	"appid": "wxbc78ce7ab1bebf4d",
+	"appid": "wxbf6f66e7cc11c517",
 	"projectname": "gongxiang",
 	"isGameTourist": false,
 	"condition": {
@@ -30,12 +30,33 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 3,
 			"list": [
 				{
 					"id": 0,
 					"name": "扫码",
 					"pathName": "pages/login/login",
+					"query": "number=ko2900",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "扫码",
+					"pathName": "pages/work/work",
+					"query": "number=ko2900",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "扫码",
+					"pathName": "pages/index/index",
+					"query": "number=ko2900",
+					"scene": "1011"
+				},
+				{
+					"id": -1,
+					"name": "扫码",
+					"pathName": "pages/index/index",
 					"query": "number=ko2900",
 					"scene": "1011"
 				}

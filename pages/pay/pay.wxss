@@ -1,75 +1,104 @@
 /* pay */
-.payline { 
-  width:96%;
-  border-bottom:1px solid #eee;
-  margin:30rpx auto;
-  }
+.head {
+    position: relative;
+}
+.head image {
+    width: 750rpx;
+    height: 350rpx;
+}
 .title {
-  display: block;
-  text-align: center;
-  color:#999;
-  font-size:12pt;
-  margin-bottom: -10px;
+    position: absolute;
+    bottom: 28rpx;
+    left: 0;
+    right: 0;
+    height: 80rpx;
+    line-height: 80rpx;
+    background:rgba(0,0,0,.2);
+    text-align: left;
+}
+
+.payline {
+    width: 96%;
+    border-bottom: 1px solid #eee;
+    margin: 30rpx auto;
+}
+
+.title {
+    display: block;
+    text-align: center;
+    color: #999;
+    font-size: 12pt;
+    margin-bottom: -10px;
 }
 
 .payitem {
-  width:88%;
-  line-height:100rpx;
-  border:2px solid #ececec;
-  border-radius:50rpx;
-  margin:26rpx auto;
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
+    width: 88%;
+    line-height: 88rpx;
+    border: 3rpx solid #333;
+    border-radius: 50rpx;
+    margin: 26rpx auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+
 .payitem .radiomodel {
-  width:46rpx;
-  height:46rpx;
-  border:2px solid #ececec;
-  border-radius: 50%;
-  margin:0 30rpx;
+    width: 40rpx;
+    height: 40rpx;
+    border: 2rpx solid #333;
+    border-radius: 50%;
+    margin: 0 40rpx;
 }
+
 .payitem .itemname {
-  font-size:16pt;
-  font-weight:bold;
-  margin-left:-80rpx;
+    font-size: 38rpx;
+    font-weight: bold;
+    margin-left: -80rpx;
 }
+
 .payitem .payspecific {
-  align-self:flex-end;
-  margin-right: 40rpx;
-  padding-top:1rpx;
+    align-self: flex-end;
+    margin-right: 40rpx;
+    padding-top: 1rpx;
 }
+
 .payitem .payspecific text:first-child {
-  font-size:16pt;
+    font-size: 38rpx;
+    width: 44rpx;
+    text-align: right;
 }
+
 .payitem .payspecific text:last-child {
-  font-size:11pt;
+    font-size: 24rpx;
 }
+
 .payitem.active {
-  border:2px solid #000;
+    color: #f5965b;
+    border: 3rpx solid #f5965b;
 }
+
 .payitem.active .radiomodel {
-  background: #fb7828;
+    background: #f5965b;
 }
 
 button {
-  width:88%;
-  line-height: 90rpx;
-  border-radius: 50rpx;
-  box-shadow: 8rpx 8rpx 8rpx #ccc;
-  color:#fff;
-  background: linear-gradient(#fa7828, #fb3c3a);
-  margin-top: 20rpx;
+    width: 88%;
+    line-height: 88rpx;
+    border-radius: 50rpx;
+    /* box-shadow: 8rpx 8rpx 8rpx #ccc; */
+    color: #fff;
+    background: linear-gradient(#fdc161, #f08342);
+    margin-top: 40rpx;
 }
+
 .terms {
-  display:flex;
-  justify-content:center;
-  margin-top:40rpx;
-  align-items:center;
+    display: flex;
+    justify-content: center;
+    margin-top: 40rpx;
+    align-items: center;
 }
+
 .terms text {
-  font-size: 10pt;
-  margin-left: 20rpx;
+    font-size: 10pt;
+    margin-left: 20rpx;
 }
-
-

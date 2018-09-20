@@ -1,35 +1,103 @@
-
-.warp {
-  background: #eee;
-  height: 400rpx;
-  padding-top: 40rpx;
+.userInfo {
+    padding: 0 75rpx;
 }
+
+.headerPic {
+    display: block;
+    width: 174rpx;
+    height: 174rpx;
+    margin: 120rpx auto;
+    background-color: red;
+}
+.telView {
+    position: relative;
+}
+.telView input {
+    width: 520rpx;
+    height: 106rpx;
+    padding: 0 40rpx;
+}
+.closeImg {
+    position: absolute;
+    right: 40rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40rpx;
+    height: 40rpx;
+    z-index: 9;
+}
+.captchaView {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40rpx 0 60rpx;
+}
+.captchaInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 364rpx;
+}
+.captchaInput input {
+    width: 80rpx;
+    height: 104rpx;
+    text-align: center;
+}
+.captchaHideInput {
+    width: 0;
+    height: 0;
+}
+.getCapBtn {
+    width: 218rpx;
+    height: 104rpx;
+    line-height: 104rpx;
+    text-align: center;
+}
+.btnView {
+    width: 600rpx;
+    height: 98rpx;
+    line-height: 98rpx;
+    text-align: center;
+}
+/* 
+.warp {
+    background: #eee;
+    height: 400rpx;
+    padding-top: 40rpx;
+}
+
 .usrinfo {
-  border-bottom:2px solid #eee;
-  height: 160rpx;
-  width:100%;
-  background: #fff;
-  display: flex;
-  align-items:center;
-  justify-content:space-around;
+    border-bottom: 2px solid #eee;
+    height: 160rpx;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .usrinfo image {
-  width:120rpx;
-  height:120rpx;
-  background: red;
-  border-radius: 50%;
+    width: 120rpx;
+    height: 120rpx;
+    background: red;
+    border-radius: 50%;
 }
-.usrinfo .mobile { margin-left:-50rpx; }
+
+.usrinfo .mobile {
+    margin-left: -50rpx;
+}
+
 .usrinfo .mobile view {
-  font-size: 18pt;
-  color:rgb(92, 92, 92);
+    font-size: 18pt;
+    color: rgb(92, 92, 92);
 }
+
 .usrinfo .mobile text {
-  color:#888;
-  font-size: 11pt;
+    color: #888;
+    font-size: 11pt;
 }
+
 .usrinfo .loginbutton button {
-  width: 200rpx;
-  border: 1px solid #ccc;
-}
+    width: 200rpx;
+    border: 1px solid #ccc;
+} */

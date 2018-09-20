@@ -1,5 +1,46 @@
 /**app.wxss**/
 page{min-height:100%}
+/* 圆角 */
+.brsCicle {
+  border-radius: 50%;
+}
+.brs10 {
+  border-radius: 10rpx;
+}
+/* 字体颜色 */
+.cf28945 {
+    color: #F28945;
+}
+.cfff {
+    color: #fff;
+}
+.c666 {
+    color: #666;
+}
+.c999 {
+    color: #999;
+}
+/* 字体大小 */
+.fz30 {
+    font-size: 30rpx;
+}
+.fz36 {
+    font-size: 30rpx;
+}
+/* 背景色 */
+.bgf28945 {
+    background-color: #f28945;
+}
+/* 边框颜色 */
+.border2d6d6d6 {
+    border: 2rpx solid #d6d6d6;
+}
+.border2f28945 {
+    border: 2rpx solid #F28945;
+}
+.border2f5965b {
+    border: 2rpx solid #F5965B;
+}
 view,text {
   font-size: 13pt;
 }
