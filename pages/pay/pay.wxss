@@ -1,5 +1,7 @@
 /* pay */
-
+.wrap {
+    position: relative;
+}
 .head {
     position: relative;
 }
@@ -57,4 +59,21 @@ button {
     border-radius: 50rpx;
     background: linear-gradient(#fdc161, #f08342);
     margin-top: 40rpx;
+}
+
+
+.dialogView {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+.dialogView image {
+    width: 540rpx;
+    height: 360rpx;
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-50%);
 }

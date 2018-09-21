@@ -1,64 +1,73 @@
 .wrap {
-   /* background: #f5f6fa;  */
+    padding: 0 20rpx;
+    width: 710rpx;
+    background-color: #fff;
 }
 
 .myaddress {
-  padding:20rpx;
-}
-.addressicon {
-  width:60rpx;
-  height:60rpx;
-  margin-right: 40rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 76rpx;
 }
 
-.myaddress text:first-child {
-  color:#66b100;
+.myaddress image {
+    width: 24rpx;
+    height: 28rpx;
+    margin-left: 12rpx;
 }
-.myaddress .address {
-  font-size: 13pt;
-  margin:10rpx 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+
+
+
+.banner image {
+    width: 100%;
+    margin-bottom: 30rpx;
 }
-.line {
-  width:100%;
-  height: 20rpx;
-  background: #f5f6fa;
+
+
+/* 
+.addressicon {
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 40rpx;
 }
 
 .maplist {
-  padding:40rpx 0;
-  display: flex;
-  flex-flow:column; 
-  align-items: flex-end;
-}
-.maplist .item:first-child {
-  border:none;
-  font-size: 12pt;
-  color:#aaa;
-  padding:0;
-}
-.maplist .item {
-  width:92%;
-  display: flex;
-  align-items:center;
-  justify-content:space-between;
-  border-bottom: 1px solid #eee;
-  padding:20rpx 0;
-}
-.maplist .item icon {
-  margin-right:22rpx;
-}
-.maplist .item .address text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: block;
-  width:520rpx;
-}
-.maplist .item .address text:last-child {
-  color:#aaa;
-  font-size: 10pt;
+    padding: 40rpx 0;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
 }
 
+.maplist .item:first-child {
+    border: none;
+    font-size: 12pt;
+    color: #aaa;
+    padding: 0;
+}
+
+.maplist .item {
+    width: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 20rpx 0;
+}
+
+.maplist .item icon {
+    margin-right: 22rpx;
+}
+
+.maplist .item .address text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    width: 520rpx;
+}
+
+.maplist .item .address text:last-child {
+    color: #aaa;
+    font-size: 10pt;
+} */

@@ -56,6 +56,10 @@ Page({
         })
     },
     // 立即绑定
-    bindTel() { }
+    bindTel() {
+        wx.navigateTo({
+            url: '/pages/user/user',
+        })
+    }
 
 })

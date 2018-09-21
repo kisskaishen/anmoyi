@@ -1,36 +1,40 @@
 <view class='wrap'>
 
-<view class='head'>
-	<image src='http://api.diandigx.com/public/small/banner-1.png'></image>
-</view>
-
-<view class='myaddress'>
-  <text>当前位置: </text>
-  <text class='address'>{{Address||'获取位置...'}}</text>
-</view>
-<view class='line'></view>
-
-<view class='maplist'>
-  <text class='item'>附近按摩椅</text>
-
-  <block wx:for="{{cinemalist}}" wx:key="key">
-    <view class='item' bind:tap="navigatetomap" data-lat="{{item.wxlat}}" data-lon="{{item.wxlon}}">
-      <view class='address'>
-        <text>{{item.cname}}</text>
-        <text>{{item.address}}</text>
-      </view>
-      <image src="/image/icon/12.png" class='addressicon'></image>
+    <view class='head'>
+        <image src='/image/index/icon-banner.png'></image>
     </view>
-  </block>
-</view>
 
-<button class='openbule'  hover-stop-propagation="true" catch:tap="openscancode">打开扫一扫</button>
-  
- <navigator class='usericon' url='../help/help' hover-class="other-navigator-hover">
- <image src='/image/icon/5.png'></image>
- </navigator> 
+    <view class='myaddress'>
+        <image src='/image/index/icon-address.png'></image>
+        <text class='address c666 fz26 ml20 overflow1'>{{Address||'获取位置...'}}</text>
+    </view>
 
-<!-- <view class="terms">
+    <view class='banner'>
+        <block wx:for="{{3}}">
+            <image src='/image/index/icon-banner.png'></image>
+        </block>
+    </view>
+    <!-- <view class='maplist'>
+        <text class='item'>附近按摩椅</text>
+
+        <block wx:for="{{cinemalist}}" wx:key="key">
+            <view class='item' bind:tap="navigatetomap" data-lat="{{item.wxlat}}" data-lon="{{item.wxlon}}">
+                <view class='address'>
+                    <text>{{item.cname}}</text>
+                    <text>{{item.address}}</text>
+                </view>
+                <image src="/image/icon/12.png" class='addressicon'></image>
+            </view>
+        </block>
+    </view> -->
+
+    <button class='openbule' hover-stop-propagation="true" catch:tap="openscancode">打开扫一扫</button>
+
+    <!-- <navigator class='usericon' url='../help/help' hover-class="other-navigator-hover">
+        <image src='/image/icon/5.png'></image>
+    </navigator> -->
+
+    <!-- <view class="terms">
   <icon type="success" color="#fb7828" size="18"></icon>
   <text>我已阅读并同意</text>
 </view> -->
@@ -38,4 +42,4 @@
 </view>
 
 <import src="/public/template/footer" />
-<template is="footer" data="{{...footer}}"/>
+<template is="footer" data="{{...footer}}" />

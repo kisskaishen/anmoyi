@@ -1,0 +1,79 @@
+/* pages/payOrder/index.wxss */
+
+.wrap {
+    background: #fff;
+}
+
+.tipsView {
+    height: 80rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tipsView > view {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 30rpx;
+}
+
+.tipsView > view  image {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.rechargeView {
+    padding: 0 30rpx;
+    width: 690rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.recharge {
+    position: relative;
+    width: 200rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-radius: 6rpx;
+    text-align: center;
+    margin-top: 30rpx;
+}
+
+.recharge image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40rpx;
+    height: 30rpx;
+}
+
+.rechargeTip {
+    margin-top: 60rpx;
+}
+
+.btnView {
+    padding: 0 30rpx;
+}
+
+.btnView button {
+    position: relative;
+    line-height: 88rpx;
+    border-radius: 50rpx;
+    margin-top: 40rpx;
+}
+
+.btnView button.cfff {
+    background: linear-gradient(#fdc161, #f08342);
+}
+.btnView button image {
+    position: absolute;
+    right: 40rpx;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46rpx;
+    height: 46rpx;
+}

@@ -1,0 +1,35 @@
+<!--pages/payOrder/index.wxml-->
+<view class='wrap'>
+    <view class='tipsView bgfedeae'>
+        <view>
+            <image src='/image/payOrder/icon-time.png'></image>
+            <text class='ml20 mr10 c333 fz30'>按摩时间：</text>
+            <text class='cff4141 fz30'>15分钟</text>
+        </view>
+        <view>
+            <image src='/image/payOrder/icon-money.png'></image>
+            <text class='ml20 mr10 c333 fz30'>金额：</text>
+            <text class='cff4141 fz30'>15分钟</text>
+        </view>
+    </view>
+    
+    <view class='rechargeView'>
+        <block wx:for="{{rechargeList}}">
+            <view class='recharge bgf6f6f6'>
+                <text class='fz28 c333'>{{item.label}}</text>
+                <image src='/image/user/icon-hot.png' wx:if="{{index=='1'}}"></image>
+            </view>
+        </block>
+        <text class='c333 fz28 rechargeTip'>您的抵用券余额为：10元</text>
+    </view>
+
+    <view class='btnView'>
+        <button class='cf28945 fz32 bgtransparent border2f28945'>使用10现金券抵扣10元
+        <image src='/image/payOrder/icon-check.png'></image></button>
+        <button class='cfff fz32'>确定</button>
+    </view>
+    
+</view>
+
+<import src="/public/template/footer" />
+<template is="footer" />

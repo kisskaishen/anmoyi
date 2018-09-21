@@ -7,7 +7,7 @@
     </view>
     <view class='payView'>
         <block wx:for="{{4}}">
-            <view class='type  {{index==0?"cf5965b border4f5965b":"c333 border3333"}}' data-idx="{{index}}">
+            <view class='type  {{index==0?"cf5965b border4f5965b":"c333 border3333"}}' data-idx="{{index}}" bindtap='chooseType'>
                 <view class="{{index==0?'radiomodelActive':'radiomodel'}}"></view>
                 <text class='fz38  fwbold'>唤醒身体</text>
                 <view>
@@ -18,6 +18,10 @@
         </block>
     </view>
     <button loading="{{loading}}" class='fz32 cfff' bind:tap="payment">{{loading?'正在付款':'立即付款'}}</button>
+
+    <view class="dialogView" wx:if="{{isBad}}">
+        <image src='/image/index/icon-banner.png' bindtap='closeBaClick'></image>
+    </view>
 </view>
 
 <import src="/public/template/footer" />

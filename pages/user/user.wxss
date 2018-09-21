@@ -23,17 +23,24 @@
     justify-content: space-between;
     margin: 56rpx 0 40rpx;
 }
+.tipsView > view {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 .tipsView image {
     width: 30rpx;
     height: 30rpx;
 }
 
-.tipsView button {
+.tipsView navigator {
+    display: block;
     width: 154rpx;
     height: 50rpx;
     line-height: 50rpx;
     padding: 0;
+    text-align: center;
 }
 
 .moneyView {

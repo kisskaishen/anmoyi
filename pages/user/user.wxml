@@ -6,9 +6,11 @@
             <!-- <image src=''></image> -->
         </view>
         <view class='tipsView'>
-            <image src='/image/user/icon-clock.png'></image>
-            <text class='fz26 cfff ml20'>积分可以兑换抵扣券哦，点击兑换！</text>
-            <button class='cfff fz24 bgtransparent border2fff brs10'>注册送积分</button>
+            <view>
+                <image src='/image/user/icon-clock.png'></image>
+                <text class='fz26 cfff ml20'>积分可以兑换抵扣券哦，点击兑换！</text>
+            </view>
+            <navigator url="/pages/login/login" class='cfff fz24 bgtransparent border2fff brs10' wx:if="{{isBindTel}}">注册送积分</navigator>
         </view>
         <view class='moneyView'>
             <block wx:for="{{moneyType}}">
@@ -20,13 +22,13 @@
             </block>
         </view>
     </view>
-    <view class='msgView bgfff2d6'>
+    <view class='msgView bgfff2d6' wx:if="{{tipsMsg}}">
         <view class='viewFl'>
             <image src='/image/user/icon-msg.png'></image>
             <text class='ccfa96e fz30 ml20'>开业大酬宾，即买即送</text>
         </view>
         <view class='viewFr'>
-            <image src='/image/user/icon-msg-close.png'></image>
+            <image src='/image/user/icon-msg-close.png' bindtap='hideTipsMsg'></image>
         </view>
     </view>
     <view class='rechargeView'>
@@ -52,7 +54,7 @@
                 </view>
             </view>
         </block>
-    </view> 
+    </view>
 </view>
 
 <import src="/public/template/footer" />
