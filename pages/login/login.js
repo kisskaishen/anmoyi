@@ -1,69 +1,61 @@
-// pages/login/login.js
+const App = getApp();
 Page({
+    data: {
+        closeImg: false, // 清除图标隐藏
+        tel: '', // 输入手机号
+        captcha: '', // 验证码
+        isFocus: true,   // 获取焦点
+        footer: {
+            active: "usercenter"
+        },
+        isLogin: false
+    },
+    onLoad: function (options) {
+        
+    },
+    onReady: function () {
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    oninput:false,
-    inputdata:"",
-    mobile:"",
-    codefocus:0
-  },
+    },
+    onShow: function () {
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
+    },
+    onHide: function () {
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
+    },
+    onUnload: function () {
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-
-  inputmobile:function(e){
-    if(e.detail.value.length>0){
-      this.setData({ oninput:true});
-    }
-    if (e.detail.value.length==11){
-      this.setData({mobile:e.detail.value});
-    }
-  },
-  clearinput:function(){
-    this.setData({ inputdata:""})
-  },
-  inputcode:function(e){
-    if (e.target.dataset.idx && e.detail.value != "" && e.target.dataset.idx!="4"){
-      this.setData({ codefocus: e.target.dataset.idx});
-    }
-    if (e.detail.value == ""){
-      let cf = this.data.codefocus == "0" ? "0" : this.data.codefocus - 1;
-      this.setData({codefocus:cf});
-    }
-    this.setData({
-      ["ipd" + e.target.dataset.idx]: e.detail.value
-    })
-
-    let ipdata = this.data.ipd1 + '' + this.data.ipd2 + '' + this.data.ipd3 + '' + this.data.ipd4;
-    ipdata = ipdata.replace(/undefined/g,"")
-    if(ipdata.length==4){
-      console.log(123123123)
-    }
-  },
-  doreturn:function(){
-    this.setData({mobile:""});
-  }
+    },
+    // 获取手机号的值
+    getTelBind(e) {
+        let that = this;
+        that.setData({
+            tel: e.detail.value,
+            closeImg: true
+        })
+    },
+    // 清除手机号
+    clearTel() {
+        let that = this;
+        that.setData({
+            tel: '',
+            closeImg: false
+        })
+    },
+    // 验证码
+    Focus(e) {
+        let that = this;
+        let inputValue = e.detail.value;
+        that.setData({
+            captcha: inputValue,
+        })
+    },
+    Tap() {
+        let that = this;
+        that.setData({
+            isFocus: true,
+        })
+    },
+    // 立即绑定
+    bindTel() { }
 
 })

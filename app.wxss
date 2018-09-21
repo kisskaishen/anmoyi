@@ -1,5 +1,10 @@
 /**app.wxss**/
 page{min-height:100%}
+.overflow1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 /* 圆角 */
 .brsCicle {
   border-radius: 50%;
@@ -7,12 +12,43 @@ page{min-height:100%}
 .brs10 {
   border-radius: 10rpx;
 }
+/* 边距 */
+.ml10 {
+    margin-left: 10rpx;
+}
+.ml20 {
+    margin-left: 20rpx;
+}
+.mr10 {
+    margin-right: 10rpx;
+}
+.mr20 {
+    margin-right: 20rpx;
+}
+.mg10 {
+    margin: 10rpx;
+}
+.mg {
+    margin: 20rpx;
+}
 /* 字体颜色 */
 .cf28945 {
     color: #F28945;
 }
+.cf5965b {
+    color: #F5965B;
+}
 .cfff {
     color: #fff;
+}
+.cccc {
+    color: #ccc;
+}
+.ccfa96e {
+    color: #CFA96E;
+}
+.cfffeff {
+    color: #FFFEFF;
 }
 .c666 {
     color: #666;
@@ -21,28 +57,61 @@ page{min-height:100%}
     color: #999;
 }
 /* 字体大小 */
+.fz24 {
+    font-size: 24rpx;
+}
+.fz26 {
+    font-size: 26rpx;
+}
+.fz28 {
+    font-size: 28rpx;
+}
 .fz30 {
     font-size: 30rpx;
 }
 .fz36 {
-    font-size: 30rpx;
+    font-size: 36rpx;
+}
+.fz38 {
+    font-size: 38rpx;
+}
+.fz40 {
+    font-size: 40rpx;
+}
+.fwbold {
+    font-weight: bold;
 }
 /* 背景色 */
 .bgf28945 {
     background-color: #f28945;
 }
+.bgtransparent {
+    background-color: transparent;
+}
+.bgfff2d6 {
+    background-color: #FFF2D6;
+}
+.bgf6f6f6 {
+    background-color: #F6F6F6;
+}
 /* 边框颜色 */
+.border2fff {
+    border: 2rpx solid #fff;
+}
+.border3333 {
+    border: 3rpx solid #333;
+}
 .border2d6d6d6 {
     border: 2rpx solid #d6d6d6;
 }
 .border2f28945 {
     border: 2rpx solid #F28945;
 }
-.border2f5965b {
-    border: 2rpx solid #F5965B;
+.border4f5965b {
+    border: 4rpx solid #F5965B;
 }
 view,text {
-  font-size: 13pt;
+  font-size: 24rpx;
 }
 .openbule {
   color:#fff;

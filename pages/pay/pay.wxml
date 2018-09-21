@@ -1,62 +1,23 @@
 <view class='wrap'>
 
     <view class='head'>
-        <image src='http://api.diandigx.com/public/small/banner-1.png'></image>
-        <text class="title">{{chair.cname}}欢迎您</text>
+        <image src='/image/pay/icon-banner.png'></image>
+        <text class="title cfff fz30">深圳XX影城有限公司欢迎你</text>
+        <!-- <text class="title cfff fz30">{{chair.cname}}欢迎您</text> -->
     </view>
-    <!-- pay页面 -->
-    <block wx:if="{{payIsReady}}">
-        <!-- <view class="payline"></view> -->
-
-        <view class="paylist">
-            <block wx:if="{{chair.price1>0}}">
-                <view class="payitem {{active==0>0?'active':''}}" data-idx="0" bind:tap="chooseItem">
-                    <view class="radiomodel"></view>
-                    <text class="itemname">唤醒身体</text>
-                    <view class="payspecific">
-                        <text>{{chair.time1}}</text>
-                        <text>分钟/{{chair.price1}}元</text>
-                    </view>
+    <view class='payView'>
+        <block wx:for="{{4}}">
+            <view class='type  {{index==0?"cf5965b border4f5965b":"c333 border3333"}}' data-idx="{{index}}">
+                <view class="{{index==0?'radiomodelActive':'radiomodel'}}"></view>
+                <text class='fz38  fwbold'>唤醒身体</text>
+                <view>
+                    <text class='fz38 fwbold'>15</text>
+                    <text class='fz24'>分钟/8.00元</text>
                 </view>
-            </block>
-            <block wx:if="{{chair.price2>0}}">
-                <view class="payitem {{active==1?'active':''}}" data-idx="1" bind:tap="chooseItem">
-                    <view class="radiomodel"></view>
-                    <text class="itemname">通行气血</text>
-                    <view class="payspecific">
-                        <text>{{chair.time2}}</text>
-                        <text>分钟/{{chair.price2}}元</text>
-                    </view>
-                </view>
-            </block>
-            <block wx:if="{{chair.price3>0}}">
-                <view class="payitem {{active==2?'active':''}}" data-idx="2" bind:tap="chooseItem">
-                    <view class="radiomodel"></view>
-                    <text class="itemname">舒张筋骨</text>
-                    <view class="payspecific">
-                        <text>{{chair.time3}}</text>
-                        <text>分钟/{{chair.price3}}元</text>
-                    </view>
-                </view>
-            </block>
-            <block wx:if="{{chair.price4>0}}">
-                <view class="payitem {{active==3?'active':''}}" data-idx="3" bind:tap="chooseItem">
-                    <view class="radiomodel"></view>
-                    <text class="itemname">舒张筋骨</text>
-                    <view class="payspecific">
-                        <text>{{chair.time4}}</text>
-                        <text>分钟/{{chair.price4}}元</text>
-                    </view>
-                </view>
-            </block>
-
-
-        </view>
-    </block>
-
-    <view class="payline"></view>
-
-    <button loading="{{loading}}" disabled="{{loading||!payIsReady}}" bind:tap="payment">{{loading?'正在付款':'立即付款'}}</button>
+            </view>
+        </block>
+    </view>
+    <button loading="{{loading}}" class='fz32 cfff' bind:tap="payment">{{loading?'正在付款':'立即付款'}}</button>
 </view>
 
 <import src="/public/template/footer" />

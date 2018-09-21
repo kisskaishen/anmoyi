@@ -1,103 +1,142 @@
 .userInfo {
-    padding: 0 75rpx;
+    width: 650rpx;
+    height: 310rpx;
+    padding: 48rpx 50rpx 30rpx;
+    background: linear-gradient(122deg, rgba(240, 131, 66, 1) 0%, rgba(255, 198, 100, 1) 99%);
 }
 
-.headerPic {
-    display: block;
-    width: 174rpx;
-    height: 174rpx;
-    margin: 120rpx auto;
-    background-color: red;
-}
-.telView {
-    position: relative;
-}
-.telView input {
-    width: 520rpx;
-    height: 106rpx;
-    padding: 0 40rpx;
-}
-.closeImg {
-    position: absolute;
-    right: 40rpx;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40rpx;
-    height: 40rpx;
-    z-index: 9;
-}
-.captchaView {
+.userInfo > view {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: 40rpx 0 60rpx;
 }
-.captchaInput {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 364rpx;
+
+.userView {
+    justify-content: flex-start;
 }
-.captchaInput input {
+
+.userView .headPic {
     width: 80rpx;
-    height: 104rpx;
-    text-align: center;
-}
-.captchaHideInput {
-    width: 0;
-    height: 0;
-}
-.getCapBtn {
-    width: 218rpx;
-    height: 104rpx;
-    line-height: 104rpx;
-    text-align: center;
-}
-.btnView {
-    width: 600rpx;
-    height: 98rpx;
-    line-height: 98rpx;
-    text-align: center;
-}
-/* 
-.warp {
-    background: #eee;
-    height: 400rpx;
-    padding-top: 40rpx;
+    height: 80rpx;
 }
 
-.usrinfo {
-    border-bottom: 2px solid #eee;
-    height: 160rpx;
-    width: 100%;
-    background: #fff;
-    display: flex;
-    align-items: center;
+.tipsView {
+    justify-content: space-between;
+    margin: 56rpx 0 40rpx;
+}
+
+.tipsView image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.tipsView button {
+    width: 154rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    padding: 0;
+}
+
+.moneyView {
     justify-content: space-around;
 }
 
-.usrinfo image {
-    width: 120rpx;
-    height: 120rpx;
-    background: red;
-    border-radius: 50%;
+.moneyView .money {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
 }
 
-.usrinfo .mobile {
-    margin-left: -50rpx;
+.moneyView .line {
+    width: 2rpx;
+    height: 36rpx;
+    background-color: #fff;
 }
 
-.usrinfo .mobile view {
-    font-size: 18pt;
-    color: rgb(92, 92, 92);
+.msgView {
+    width: 678rpx;
+    height: 74rpx;
+    padding: 0 36rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.usrinfo .mobile text {
-    color: #888;
-    font-size: 11pt;
+.msgView .viewFl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.usrinfo .loginbutton button {
+.msgView .viewFl image {
+    width: 38rpx;
+    height: 36rpx;
+}
+
+.msgView .viewFr image {
+    width: 26rpx;
+    height: 26rpx;
+}
+
+.rechargeView {
+    padding: 0 30rpx;
+    width: 690rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.recharge {
+    position: relative;
     width: 200rpx;
-    border: 1px solid #ccc;
-} */
+    height: 88rpx;
+    line-height: 88rpx;
+    border-radius: 6rpx;
+    text-align: center;
+    margin-top: 30rpx;
+}
+
+.recharge image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40rpx;
+    height: 30rpx;
+}
+
+.pointView {
+    width: 690rpx;
+    padding: 0 30rpx;
+}
+
+.pointView image {
+    width: 690rpx;
+    height: 142rpx;
+    margin: 40rpx auto;
+}
+
+.recordView {
+    width: 690rpx;
+    padding: 0 30rpx;
+}
+
+.recond {
+    height: 112rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #eee;
+}
+
+.recond .viewFl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.recond .viewFl text {
+    max-width: 600rpx;
+    line-height: 44rpx;
+}

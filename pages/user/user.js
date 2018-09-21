@@ -1,19 +1,26 @@
 const App = getApp();
 Page({
     data: {
-        closeImg: false, // 清除图标隐藏
-        tel: '', // 输入手机号
-        captcha: '', // 验证码
-        isFocus:true,   // 获取焦点
-        footer: {
-            active: "usercenter"
-        },
-        isLogin: false
+        moneyType:[
+            { label: '账户余额', value: '123.00' },
+            { label: '消费记录', value: '10' },
+            { label: '当前积分', value: '120' },
+        ],
+        rechargeList:[
+            { label: '充20送5', value: '1' },
+            { label: '充30送10', value: '2' },
+            { label: '充50送20', value: '3' },
+            { label: '充100送40', value: '4' },
+            { label: '充200送80', value: '5' },
+            { label: '充500送100', value: '6' },
+            { label: '充100送40', value: '7' },
+            { label: '充200送80', value: '8' },
+            { label: '充500送100', value: '9' },
+            
+        ]
     },
     onLoad: function(options) {
-        wx.setNavigationBarTitle({
-            title: '个人中心'
-        })
+        
     },
     onReady: function() {
 

@@ -1,26 +1,16 @@
 {
-  "pages":[
-    "pages/pay/pay",
-    
-    "pages/work/work",
-    
-    "pages/user/user",
-    
-    "pages/index/index",
-    
-    
-    
-    
-    "pages/work2/work2",
-    "pages/help/help",
-    
-    "pages/login/login"
-    
-  ],
-  "window":{
-    "navigationBarTitleText": "共享按摩椅",
-    "navigationBarTextStyle":"light"
-  },
-
-  "debug": true
+    "pages": [
+        "pages/index/index",
+        "pages/pay/pay",
+        "pages/login/login",
+        "pages/user/user",
+        "pages/work/work",
+        "pages/work2/work2",
+        "pages/help/help"
+    ],
+    "window": {
+        "navigationBarTitleText": "共享按摩椅",
+        "navigationBarTextStyle": "light"
+    },
+    "debug": true
 }

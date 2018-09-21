@@ -1,27 +1,26 @@
-<view>
-  <view class="title">用户登陆</view>
-
-  <view wx:if="{{mobile.length!=11}}" class="mobile">
-    <icon class="icon"></icon>
-    <input class="mobile" type="number" placeholder="请输入手机号码" placeholder-class="telplaceholder" maxlength="11" focus="true" cursor="4" bindinput="inputmobile" value="{{inputdata}}"></input>
-    <icon class="mobilecancel" type='cancel' color="rgb(112,112,112)" style="{{!oninput?'display:none;':''}}" catch:tap="clearinput"></icon>
-  </view>
-
-  <view wx:if="{{mobile.length==11}}" class="vcode">
-      <view class="inpmobile"><icon class="icon"></icon>13302481400</view>
-      <view class="inputvcodes">
-        <input maxlength="1" focus="{{codefocus==0?true:''}}" bindinput="inputcode" data-idx="1"></input>
-        <input maxlength="1" focus="{{codefocus==1?true:''}}" bindinput="inputcode" data-idx="2"></input>
-        <input maxlength="1" focus="{{codefocus==2?true:''}}" bindinput="inputcode" data-idx="3"></input>
-        <input maxlength="1" focus="{{codefocus==3?true:''}}" bindinput="inputcode" data-idx="4"></input>
-      </view>
-      <view>
-        <view class='vcodeerror'><icon type="warn" size="20" color="red"/>
-          <text>asdfasdfsadf</text>
+<view class="warp">
+    <view class="userInfo">
+        <image src='/image/login/icon-login.png' class='headerPic brsCicle'></image>
+        <view class='formView'>
+            <view class='telView'>
+                <input type='number' value='{{tel}}' maxlength='11' bindinput='getTelBind' placeholder-class='c999' placeholder='请输入手机号' class='border2d6d6d6 fz30 brs10'></input>
+                <image src='/image/login/icon-clear.png' bindtap='clearTel' class='closeImg' wx:if='{{closeImg}}'></image>
+            </view>
+            <view class='captchaView'>
+                <view class='captchaInput'>
+                    <block wx:for="{{4}}" wx:key="item">
+                        <input class='border2d6d6d6 brs10' maxlength='1' focus='{{isFocus}}' value="{{captcha.length>=index+1?captcha[index]:''}}" catchtap='Tap'></input>
+                    </block>
+                </view>
+                <input class='captchaHideInput' maxlength="{{4}}" focus="{{isFocus}}" bindinput="Focus"></input>
+                <view class='getCapBtn border2f28945 cf28945 brs10 fz30'>
+                    获取验证码
+                </view>
+            </view>
+            <view class='btnView fz36 bgf28945 brs10 cfff' bindtap='bindTel'>立即绑定</view>
         </view>
-        <button bindtap='doreturn'>返回</button>
-      </view>
-  </view>
+    </view>
+
 </view>
 
 <import src="/public/template/footer" />

@@ -1,40 +1,58 @@
 <view class="warp">
     <view class="userInfo">
-        <image src='' class='headerPic brsCicle'></image>
-        <view class='formView'>
-            <view class='telView'>
-                <input type='number' value='{{tel}}' maxlength='11' bindinput='getTelBind' placeholder-class='c999' placeholder='请输入手机号' class='border2d6d6d6 fz30 brs10'></input>
-                <image src='/image/banner-1.png' bindtap='clearTel' class='closeImg' wx:if='{{closeImg}}'></image>
-            </view>
-            <view class='captchaView'>
-                <view class='captchaInput'>
-                    <block wx:for="{{4}}" wx:key="item">
-                        <input class='border2d6d6d6 brs10' maxlength='1' focus='{{isFocus}}' value="{{captcha.length>=index+1?captcha[index]:''}}" catchtap='Tap'></input>
-                    </block>
-                </view>
-                 <input class='captchaHideInput' maxlength="{{4}}" focus="{{isFocus}}" bindinput="Focus"></input>
-                <view class='getCapBtn border2f28945 cf28945 brs10 fz30'>
-                    获取验证码
-                </view>
-            </view>
-            <view class='btnView fz36 bgf28945 brs10 cfff' bindtap='bindTel'>立即绑定</view>
+        <view class='userView'>
+            <image src='/image/user/icon-header.png' class='headPic brsCicle'></image>
+            <text class='fz40 cfff ml20'>按摩小达人</text>
+            <!-- <image src=''></image> -->
         </view>
-        <!-- <image></image>
-      <view class="mobile">
-        <view>ccc</view>
-        <text>13302481400</text>
-      </view>
-      <view class="loginbutton">
-          
-        <block wx:if="{{isLogin}}">
-            <button plain="false" type="primary" bindtap="dologinout">退出</button>
-        </block>
-        <block wx:else>
-            <button type="primary" bindtap="dologin">登陆</button>
-        </block>
-      </view> -->
+        <view class='tipsView'>
+            <image src='/image/user/icon-clock.png'></image>
+            <text class='fz26 cfff ml20'>积分可以兑换抵扣券哦，点击兑换！</text>
+            <button class='cfff fz24 bgtransparent border2fff brs10'>注册送积分</button>
+        </view>
+        <view class='moneyView'>
+            <block wx:for="{{moneyType}}">
+                <view class='money cfffeff'>
+                    <text class='fz30'>{{item.value}}</text>
+                    <text class='fz24'>{{item.label}}</text>
+                </view>
+                <view class='line' wx:if="{{index<2}}"></view>
+            </block>
+        </view>
     </view>
-
+    <view class='msgView bgfff2d6'>
+        <view class='viewFl'>
+            <image src='/image/user/icon-msg.png'></image>
+            <text class='ccfa96e fz30 ml20'>开业大酬宾，即买即送</text>
+        </view>
+        <view class='viewFr'>
+            <image src='/image/user/icon-msg-close.png'></image>
+        </view>
+    </view>
+    <view class='rechargeView'>
+        <block wx:for="{{rechargeList}}">
+            <view class='recharge bgf6f6f6'>
+                <text class='fz28 c333'>{{item.label}}</text>
+                <image src='/image/user/icon-hot.png' wx:if="{{index=='1'}}"></image>
+            </view>
+        </block>
+    </view>
+    <view class='pointView'>
+        <image src='/image/user/icon-banner.png'></image>
+    </view>
+    <view class='recordView'>
+        <block wx:for="{{4}}">
+            <view class='recond'>
+                <view class='viewFl'>
+                    <text class='fz28 c333 fwbold overflow1'>深圳南山欢乐颂星际影城店</text>
+                    <text class='fz24 cccc'>2018年4月20日 12:22:20</text>
+                </view>
+                <view class='viewFr'>
+                    <text class='fz28 c333 fwbold'>￥12</text>
+                </view>
+            </view>
+        </block>
+    </view> 
 </view>
 
 <import src="/public/template/footer" />
