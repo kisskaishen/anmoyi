@@ -38,6 +38,9 @@ page{min-height:100%}
 .cf5965b {
     color: #F5965B;
 }
+.cffaf19 {
+    color: #FFAF19;
+}
 .cff4141 {
     color: #FF4141;
 }
@@ -121,6 +124,9 @@ page{min-height:100%}
 }
 .border4f5965b {
     border: 4rpx solid #F5965B;
+}
+.border2ffaf19 {
+    border: 2rpx solid #ffaf19;
 }
 view,text {
   font-size: 24rpx;

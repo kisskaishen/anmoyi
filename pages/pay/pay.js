@@ -4,12 +4,10 @@ const App = getApp();
 Page({
     data: {
         isBad:false,            // 设备不在线的温馨提示
-
-
+        active: 0,              // 默认选择第一个
 
         payIsReady: false,
         chair: null,
-        active: 0,
         footer: {
             active: ""
         }
@@ -31,7 +29,11 @@ Page({
     },
 
     // 切换选择项目
-    chooseType() {
+    chooseType(e) {
+        let that = this;
+        that.setData({
+            active: e.currentTarget.dataset.idx
+        })
         
     },
 

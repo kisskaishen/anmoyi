@@ -9,9 +9,9 @@
         </view>
 
         <view class='timer'>
-            <text class='fz72 cf28945 fwbold endTime'>15:00</text>
-            <text class='fz24 c666'>(启动按摩椅中)</text>
-            <text class='fz24 c666'>(正在使用中)</text>
+            <text class='fz72 cf28945 fwbold status'>运行中</text>
+            <text class='fz36 cf28945 fwbold endTime'>{{endTime}}</text>
+            <text class='fz24 c666'>按摩时间：15:00</text>
         </view>
     </view>
 

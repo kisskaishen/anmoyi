@@ -3,6 +3,7 @@ Page({
     data: {
         isBindTel: true, // 是否绑定手机号，控制按钮隐藏显示
         tipsMsg: true, // 消息提醒框是否隐藏
+        noBind:false,        // 未绑定手机号
         moneyType: [{
                 label: '账户余额',
                 value: '123.00'
@@ -39,19 +40,7 @@ Page({
             {
                 label: '充500送100',
                 value: '6'
-            },
-            {
-                label: '充100送40',
-                value: '7'
-            },
-            {
-                label: '充200送80',
-                value: '8'
-            },
-            {
-                label: '充500送100',
-                value: '9'
-            },
+            }
 
         ]
     },

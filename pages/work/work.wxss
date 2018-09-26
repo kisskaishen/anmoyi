@@ -33,9 +33,13 @@
     justify-content: space-around;
     align-items: center;
 }
+.status {
+    margin: 48rpx 0 20rpx;
 
+}
 .endTime {
-    margin: 72rpx 0 42rpx;
+    margin: 0 0 20rpx;
+    
 }
 
 .adlist {

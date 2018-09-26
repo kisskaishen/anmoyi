@@ -1,0 +1,21 @@
+<!--pages/points/point.wxml-->
+<view class='wrap'>
+    <view class='banner'>
+        <image src='/image/index/icon-banner.png'></image>
+    </view>
+    <view class='poinView '>
+        <text class='fz30 c333'>当前积分1000</text>
+    </view>
+    <view class='listView'>
+        <block wx:for="{{4}}">
+            <view class='pointList'>
+                <view class='fwbold fz28 cfff'>￥10</view>
+                <text class='c333 fz28'>1000积分兑换10元</text>
+                <view class='cffaf19 fz28 bgtransparent border2ffaf19'>兑换</view>
+            </view>
+        </block>
+    </view>
+</view>
+
+<import src="/public/template/footer" />
+<template is="footer" />

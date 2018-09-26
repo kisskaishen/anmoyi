@@ -7,8 +7,8 @@
     </view>
     <view class='payView'>
         <block wx:for="{{4}}">
-            <view class='type  {{index==0?"cf5965b border4f5965b":"c333 border3333"}}' data-idx="{{index}}" bindtap='chooseType'>
-                <view class="{{index==0?'radiomodelActive':'radiomodel'}}"></view>
+            <view class='type  {{index==active?"cf5965b border4f5965b":"c333 border3333"}}' data-idx="{{index}}" bindtap='chooseType'>
+                <view class="{{index==active?'radiomodelActive':'radiomodel'}}"></view>
                 <text class='fz38  fwbold'>唤醒身体</text>
                 <view>
                     <text class='fz38 fwbold'>15</text>

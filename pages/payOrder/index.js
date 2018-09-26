@@ -11,12 +11,13 @@ Page({
             { label: '充50送20', value: '3' },
             { label: '充100送40', value: '4' },
             { label: '充200送80', value: '5' },
-            { label: '充500送100', value: '6' },
-            { label: '充100送40', value: '7' },
-            { label: '充200送80', value: '8' },
-            { label: '充500送100', value: '9' },
-
-        ]
+            { label: '充500送100', value: '6' }
+        ],
+        quanArr:[
+            { label: '10元抵用券', value: '1' },
+            { label: '20元抵用券', value: '2' },
+        ],
+        quanValue:'',
     },
 
     /**
@@ -73,5 +74,13 @@ Page({
      */
     onShareAppMessage: function() {
 
+    },
+    // 抵用券使用
+    quanChange(e) {
+        let that = this;
+        console.log(e)
+        that.setData({
+            quanValue:e.detail.value
+        })
     }
 })

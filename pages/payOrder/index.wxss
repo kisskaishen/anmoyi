@@ -52,6 +52,10 @@
 }
 
 .rechargeTip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30rpx;
     margin-top: 60rpx;
 }
 
@@ -67,7 +71,7 @@
 }
 
 .btnView button.cfff {
-    background: linear-gradient(#fdc161, #f08342);
+    background: linear-gradient(#FFB619, #FF981C);
 }
 .btnView button image {
     position: absolute;

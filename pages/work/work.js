@@ -6,16 +6,41 @@ Page({
         startinfo: null,
         time: '启动按摩椅中...',
         iscountdown: false,
-        cnumber: ''
+        cnumber: '',
+        endTime:'',             // 剩余时间
+        totalTime:5,               // 总时间
     },
     onLoad: function(options) {
-        this.getStartTime(options)
-        this.setData({
+        let that = this
+        that.getStartTime(options)
+        that.setData({
             cnumber: App.globalData.cnumber
         })
         wx.setNavigationBarTitle({
             title: '启动按摩椅中'
         })
+        let hour = '00'
+        let minite = '00'
+        let second = '00'
+
+        let time = setInterval(()=>{
+            if (that.data.totalTime>0) {
+                
+                hour = parseInt(that.data.totalTime / 60 / 60) < 10 ? '0' +parseInt(that.data.totalTime / 60 / 60) : parseInt(that.data.totalTime / 60 / 60)
+                minite = parseInt(that.data.totalTime / 60 % 60) < 10 ? '0'+parseInt(that.data.totalTime / 60 % 60) : parseInt(that.data.totalTime / 60 % 60)
+                second = that.data.totalTime % 60 < 10 ? '0'+that.data.totalTime % 60 : that.data.totalTime % 60
+                that.setData({
+                    totalTime: that.data.totalTime - 1,
+                    endTime: `${hour}:${minite}:${second}`
+                })
+            } else {
+                clearInterval(time)
+                that.setData({
+                    totalTime: 0,
+                    endTime:'已停止'
+                })
+            }
+        },1000)
     },
     onShow: function() {
 

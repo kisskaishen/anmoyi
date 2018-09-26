@@ -1,6 +1,5 @@
 .userInfo {
     width: 650rpx;
-    height: 310rpx;
     padding: 48rpx 50rpx 30rpx;
     background: linear-gradient(122deg, rgba(240, 131, 66, 1) 0%, rgba(255, 198, 100, 1) 99%);
 }
@@ -45,6 +44,7 @@
 
 .moneyView {
     justify-content: space-around;
+    margin: 56rpx 0 40rpx;
 }
 
 .moneyView .money {
